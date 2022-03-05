@@ -26,6 +26,10 @@ tar -xf bin/unix/node.tar.xz -C bin/unix/
 Please type this command in your powershell
 
 ```powershell
+#unzip the binary file
+Expand-Archive -Path .\bin\windows\node.zip -DestinationPath .\bin\windows\
+
+# start with this command
 .\bin\node.exe star.js
 ```
 
