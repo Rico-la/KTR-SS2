@@ -10,9 +10,35 @@ readline.question(`Choose the size of the star (1, 2, 3, ...)\n`, size => {
 
   if (parseSize !== 0 && parseSize > 0 && typeof parseSize !== 'string') {
     star.drawStar(parseSize)
-  }
 
-  readline.close()
+    readline.close()
+
+  } else if (parseSize === 0) {
+    readline.question('Please select a number greather than 0\n', size => {
+      const parseSize = +size // sugar syntax for parseInt
+
+      if (parseSize === 0 || parseSize < 0 || typeof parseSize !== 'number') {
+        readline.close()
+
+      } else {
+
+        star.drawStar(parseSize)
+        readline.close()
+      }
+    })
+  } else if (typeof size === 'string') {
+    readline.question('Please select a number not a string \n', size => {
+      const parseSize = +size // sugar syntax for parseInt
+
+      if (typeof parseSize !== 'number' || parseSize === 0 || parseSize < 0) {
+        readline.close()
+      } else {
+
+        star.drawStar(parseSize)
+        readline.close()
+      }
+    })
+  }
 })
 
 
