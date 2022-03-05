@@ -14,7 +14,11 @@ Otherwise you have binaries to launch the script.
 If you have a macOs (x64) or Linux system (x64), please type this command
 
 ```bash
-./bin/node star.js 
+# unzip the binary file
+tar -xf bin/unix/node.tar.xz -C bin/unix/ 
+
+# start with this command
+./bin/unix/node star.js 
 ```
 
 ## Windows
